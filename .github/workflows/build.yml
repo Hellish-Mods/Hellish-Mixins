@@ -12,6 +12,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - run: ls
       - run: ./gradlew build
       - run: echo "TIME=$(date +%d-%m-%Y-%H-%M-%S)" >> $GITHUB_ENV
 
