@@ -1,0 +1,41 @@
+name: Build
+run-name: Building the mod...
+
+on:
+  push:
+    branches:
+      - main
+  
+  workflow_dispatch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: ./gradlew build
+      - run: echo "TIME=$(date +%d-%m-%Y-%H-%M-%S)" >> $GITHUB_ENV
+
+      - uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ env.TIME }}
+          release_name: ${{ env.TIME }}
+          draft: true
+          prerelease: false
+        id: create_release
+
+      - uses: actions/upload-release-asset@v1.0.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./build/libs/hellishlocalization-${{ env.TIME }}.jar
+          asset_name: hellishlocalization-${{ env.TIME }}.jar
+          asset_content_type: application/java-archive
+          
+      - uses: eregon/publish-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          release_id: ${{ steps.create_release.outputs.id }}
