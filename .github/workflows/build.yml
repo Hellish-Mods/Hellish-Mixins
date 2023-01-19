@@ -1,12 +1,7 @@
 name: Build
 run-name: Building the mod...
 
-on:
-  push:
-    branches:
-      - main
-  
-  workflow_dispatch:
+on: [workflow_dispatch]
 
 jobs:
   build:
