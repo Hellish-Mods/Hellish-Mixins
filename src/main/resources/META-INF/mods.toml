@@ -1,0 +1,35 @@
+modLoader="javafml"
+loaderVersion="[36,)"
+
+license="MIT"
+issueTrackerURL="https://change.me.to.your.issue.tracker.example.invalid/"
+
+[[mods]]
+modId="hellishlocalization"
+version="${file.jarVersion}"
+
+displayName="Hellish Localization"
+displayURL="https://www.curseforge.com/minecraft/mc-mods/hellish-localization"
+logoFile="pack.png"
+
+authors="Hellish Mods & Modern Modpacks"
+credits="""
+G_cat (Coding, russian localization)
+"""
+
+description="Adds localization to mods that lack it"
+
+[[dependencies.hellishlocalization]]
+    modId="forge"
+    mandatory=true
+
+    versionRange="[36,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.hellishlocalization]]
+    modId="minecraft"
+    mandatory=true
+
+    versionRange="[1.16.5,1.17)"
+    ordering="NONE"
+    side="BOTH"
