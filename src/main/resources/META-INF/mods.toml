@@ -2,7 +2,7 @@ modLoader="javafml"
 loaderVersion="[36,)"
 
 license="MIT"
-issueTrackerURL="https://change.me.to.your.issue.tracker.example.invalid/"
+issueTrackerURL="https://github.com/Hellish-Mods/Hellish-Localization/issues"
 
 [[mods]]
 modId="hellishlocalization"
