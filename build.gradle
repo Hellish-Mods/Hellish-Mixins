@@ -34,7 +34,6 @@ minecraft {
                 }
             }
         }
-
         server {
             workingDirectory project.file('run')
 
@@ -47,25 +46,8 @@ minecraft {
                 }
             }
         }
-
-        data {
-            workingDirectory project.file('run')
-
-            property 'forge.logging.markers', 'REGISTRIES'
-            property 'forge.logging.console.level', 'debug'
-
-            args '--mod', 'hellishlocalization', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
-
-            mods {
-                hellishlocalization {
-                    source sourceSets.main
-                }
-            }
-        }
     }
 }
-
-sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
     maven {
@@ -100,6 +82,6 @@ jar {
             "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }
-}
 
-jar.finalizedBy('reobfJar') 
+    finalizedBy 'reobfJar'
+}
