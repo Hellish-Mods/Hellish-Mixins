@@ -6,7 +6,7 @@
 
 [![logo](https://raw.githubusercontent.com/Hellish-Mods/Hellish-Localization/main/src/main/resources/pack.png)](https://www.curseforge.com/minecraft/mc-mods/hellish-localization)
 
-This mod (or, rather, a resource pack packaged as a mod) adds various lang files for different mods. We made it because a lot of mods don't have proper localization, especially for 1.16, which many mod developers consider a "dead version".
+This mod (or rather, a resource pack packaged as a mod) adds various lang files for different mods. We made it because a lot of mods don't have proper localization, especially for 1.16, which many mod developers consider a "dead version".
 
 ## This mod currently has support for:
 
