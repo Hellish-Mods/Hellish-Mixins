@@ -1,7 +1,7 @@
 # Hellish Localization
 ### A simple solution to your localization problems.
 
-[![cf](https://cf.way2muchnoise.eu/versions/hellish-localization.svg)](https://www.curseforge.com/minecraft/mc-mods/hellish-localization)
+[![cf](https://cf.way2muchnoise.eu/full_hellish-localization_downloads.svg)](https://www.curseforge.com/minecraft/mc-mods/hellish-localization)
 [![actions](https://github.com/hellish-mods/hellish-localization/actions/workflows/build.yml/badge.svg)](https://github.com/hellish-mods/hellish-localization)
 
 [![logo](https://raw.githubusercontent.com/Hellish-Mods/Hellish-Localization/main/src/main/resources/pack.png)](https://www.curseforge.com/minecraft/mc-mods/hellish-localization)

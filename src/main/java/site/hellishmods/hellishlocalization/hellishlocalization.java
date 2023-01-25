@@ -7,6 +7,7 @@ import net.minecraftforge.fml.common.Mod;
 public class hellishlocalization
 {
     public hellishlocalization() {
+        // Register mod lmao
         MinecraftForge.EVENT_BUS.register(this);
     }
 }
