@@ -12,6 +12,7 @@ jobs:
       - run: ./gradlew build
       - run: echo "VERSION=$(ls build/libs | cut -d "-" -f 2- | cut -d "." -f 1)" >> $GITHUB_ENV
       - run: echo "FILE=$(ls -d build/libs/*)" >> $GITHUB_ENV
+      - run: echo "FILENAME=$(ls build/libs)" >> $GITHUB_ENV
 
       - uses: actions/create-release@v1
         env:
@@ -29,7 +30,7 @@ jobs:
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: ${{ env.FILE }}
-          asset_name: ${{ env.VERSION }}.jar
+          asset_name: ${{ env.FILENAME }}
           asset_content_type: application/java-archive
           
       - uses: eregon/publish-release@v1
